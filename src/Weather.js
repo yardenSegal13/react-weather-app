@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
+import FormattedTime from "./FormattedTime";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -12,15 +14,14 @@ export default function Weather(props) {
       country: response.data.sys.country,
       temperature: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
-      date: "Wedensday 10/05",
-      LastUpdated: "12:24",
+      date: new Date(response.data.dt * 1000),
       humidity: Math.round(response.data.main.humidity),
       wind: Math.round(response.data.wind.speed),
     });
   }
 
   function search() {
-    let apiKey = `cf6b50b908fa2e0baca3eed8a569a5f6`;
+    let apiKey = `9eca7aac0b071aa16e3cb063adba0785`;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(getData);
   }
@@ -76,11 +77,15 @@ export default function Weather(props) {
         <ul>
           <div className="row">
             <div className="col-6">
-              <li>{weatherData.date}</li>
-              <li>{weatherData.lastUpdated}</li>
+              <li>
+                <FormattedDate date={weatherData.date} />
+              </li>
+              <li>
+                <FormattedTime date={weatherData.date} />
+              </li>
             </div>
             <div className="col-6">
-              <li>Humidity: {weatherData.humidity}</li>
+              <li>Humidity: {weatherData.humidity}%</li>
               <li>Wind: {weatherData.wind} km/h</li>
             </div>
           </div>
