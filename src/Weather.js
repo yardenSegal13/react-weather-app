@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import FormattedDate from "./FormattedDate";
-import FormattedTime from "./FormattedTime";
+import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -65,31 +64,7 @@ export default function Weather(props) {
     return (
       <div className="weather-app">
         {form}
-        <h1>
-          {weatherData.name}
-          {weatherData.country}
-        </h1>
-        <h2>
-          <strong>{weatherData.temperature}</strong>
-          <small>°C</small>
-        </h2>
-        <h3>{weatherData.description}</h3>
-        <ul>
-          <div className="row">
-            <div className="col-6">
-              <li>
-                <FormattedDate date={weatherData.date} />
-              </li>
-              <li>
-                <FormattedTime date={weatherData.date} />
-              </li>
-            </div>
-            <div className="col-6">
-              <li>Humidity: {weatherData.humidity}%</li>
-              <li>Wind: {weatherData.wind} km/h</li>
-            </div>
-          </div>
-        </ul>
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {
