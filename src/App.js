@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <div className="container ">
         <div className="weather-app-wrapper">
-          <Weather />
+          <Weather defaultCity="New york" />
           <footer>
             Coded by{" "}
             <a href="https://roaring-meerkat-e39285.netlify.app/">
