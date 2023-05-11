@@ -6,28 +6,39 @@ body {
 
 h1 {
   margin-top: 20px;
+  font-size: 50px;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 50px;
   color: #000000;
 }
 
 h2 strong {
   position: relative;
-  top: -15px;
+  top: -5px;
   padding-left: 10px;
 }
 
 h2 small {
   font-size: 16px;
   position: relative;
-  top: -33px;
+  top: -30px;
+}
+
+h2 a {
+  text-decoration: none;
+  transition: 200ms all ease-in-out;
+}
+
+h2 a:hover {
+  text-decoration: underline;
 }
 
 h3 {
   font-size: 20px;
   margin-bottom: 20px;
+  text-transform: capitalize;
 }
 
 ul {
