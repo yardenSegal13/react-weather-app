@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 export default function WeatherTemperature(props) {
   const [temperature, setTemperature] = useState(props.celsius);
@@ -10,7 +10,7 @@ export default function WeatherTemperature(props) {
 
   function showFahrenheit(event) {
     event.preventDefault();
-    setTemperature(Math.round((props.celsius * 5) / 9 + 32));
+    setTemperature(Math.round((props.celsius * 9) / 5 + 32));
   }
 
   if (temperature === props.celsius) {
