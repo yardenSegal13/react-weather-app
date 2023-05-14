@@ -12,7 +12,7 @@ export default function WeatherInfo(props) {
         {props.data.country}
       </h1>
       <h2>
-        <Icon icon={props.data.icon} />
+        <Icon icon={props.data.icon} size={60} />
         <WeatherTemperature celsius={props.data.temperature} />
       </h2>
       <h3>{props.data.description}</h3>

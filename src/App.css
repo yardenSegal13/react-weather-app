@@ -48,7 +48,7 @@ ul {
 
 li {
   list-style: none;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.5;
 }
 
@@ -79,4 +79,18 @@ li {
 
 .my-location-button:hover {
   background-color: #0849e0;
+}
+
+.forecast-day-wrapper {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.icon-forecast {
+  margin: 10px 0;
+}
+
+.degrees-max {
+  font-weight: 900;
 }

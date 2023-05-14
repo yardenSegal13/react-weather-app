@@ -36,7 +36,7 @@ export default function Icon(props) {
         thunder: "#ffd800",
         fog: "#a2a2aa",
       }}
-      size={60}
+      size={props.size}
     />
   );
 }
