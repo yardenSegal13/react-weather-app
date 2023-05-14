@@ -12,6 +12,8 @@ export default function Weather(props) {
       ready: true,
       name: `${response.data.name} ,`,
       country: response.data.sys.country,
+      lon: response.data.coord.lon,
+      lat: response.data.coord.lat,
       temperature: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
