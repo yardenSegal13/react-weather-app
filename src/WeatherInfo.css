@@ -1,0 +1,47 @@
+h1 {
+  margin-top: 20px;
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 50px;
+  color: #000000;
+}
+
+h2 .temperature {
+  position: relative;
+  top: -5px;
+  padding-left: 10px;
+}
+
+h2 .units {
+  font-size: 16px;
+  position: relative;
+  top: -30px;
+}
+
+h2 .unit-link {
+  text-decoration: none;
+  transition: 200ms all ease-in-out;
+}
+
+h2 .unit-link:hover {
+  text-decoration: underline;
+}
+
+h3.description {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+ul.weather-info {
+  margin: 0;
+  padding: 0;
+}
+
+li.weather-info-element {
+  list-style: none;
+  font-size: 20px;
+  line-height: 1.5;
+}

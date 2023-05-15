@@ -1,0 +1,13 @@
+.forecast-day-wrapper {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.icon-forecast {
+  margin: 10px 0;
+}
+
+.degrees-max {
+  font-weight: 900;
+}

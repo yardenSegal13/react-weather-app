@@ -1,4 +1,5 @@
 import Icon from "./Icon";
+import "./WeatherForecastDay.css";
 export default function WeatherForecastDay(props) {
   function maxTemp() {
     let maxTemp = Math.round(props.daily.temp.max);
